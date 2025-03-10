@@ -43,14 +43,14 @@ export function Step1Form({ userEmail }: Step1FormProps) {
       if (onboardingError) throw onboardingError
 
       // Create or update profile
-      const { error: profileError } = await supabase.from("profiles").upsert({
-        id: user.id,
-        email: email,
-        onboarding_completed: false,
-        role: "user",
-      })
+ //     const { error: profileError } = await supabase.from("profiles").upsert({
+ //       id: user.id,
+ //       email: email,
+ //       onboarding_completed: false,
+ //       role: "user",
+ //     })
 
-      if (profileError) throw profileError
+ //     if (profileError) throw profileError
 
       toast({
         title: "Step completed",
