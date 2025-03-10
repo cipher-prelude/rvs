@@ -33,14 +33,14 @@ export function Step1Form({ userEmail }: Step1FormProps) {
       if (!user) throw new Error("User not found")
 
       // Update or create user onboarding record
-      const { error: onboardingError } = await supabase.from("user_onboarding").upsert({
-        user_id: user.id,
-        step1_completed: true,
-        step2_completed: false,
-        step3_completed: false,
-      })
+      // const { error: onboardingError } = await supabase.from("user_onboarding").upsert({
+      //   user_id: user.id,
+      //   step1_completed: true,
+      //   step2_completed: false,
+      //   step3_completed: false,
+      // })
 
-      if (onboardingError) throw onboardingError
+      // if (onboardingError) throw onboardingError
 
       // Create or update profile
  //     const { error: profileError } = await supabase.from("profiles").upsert({
